@@ -1,8 +1,11 @@
 import React from 'react';
-export default function DisplayTask() {
+import "./../styles/TaskName.css";
+export default function DisplayTask(props) {
     return (
         <div>
-            Go to The Gym Everyday
+            <div className="TaskHeading">
+                &lt;Task&gt; {props.task} &lt;/Task&gt;
+            </div>
         </div>
     )
 }

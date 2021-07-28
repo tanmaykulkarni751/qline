@@ -1,18 +1,48 @@
 import React from 'react';
-import Circle from './Circle';
-import { Container, Row, Col, ProgressBar } from 'react-bootstrap';
+import { ProgressBar } from 'react-bootstrap';
 import "./../../styles/Progress.css";
 
-export default function Progress() {
+export default function Progress(props) {
+    const values = props.data;
     return (
         <ProgressBar className="bar">
-            <ProgressBar style={{backgroundColor:"#EOFBFC"}} now={14.28} key={1} />
-            <ProgressBar variant="danger" now={14.28} key={2} />
-            <ProgressBar variant="success" now={14.28} key={3} />
-            <ProgressBar variant="danger" now={14.28} key={4} />
-            <ProgressBar variant="success" now={14.28} key={5} />
-            <ProgressBar variant="warning" now={14.28} key={6} />
-            <ProgressBar variant="success" now={14.28} key={7} />
+            {console.log(props.data)}
+            <ProgressBar variant="dark" now={2} key={1} />
+            {(values[0] === 1) ? 
+                <ProgressBar variant="success" now={12} key={1} /> :
+                    (values[0] === 0) ? <ProgressBar variant="danger" now={12} key={1} /> :
+                        <ProgressBar style={{backgroundColor:"#808080"}} now={12} key={3} />}
+            <ProgressBar variant="dark" now={2} key={1} />
+            {(values[1] === 1) ? 
+                <ProgressBar variant="success" now={12} key={1} /> :
+                    (values[1] === 0) ? <ProgressBar variant="danger" now={12} key={1} /> :
+                        <ProgressBar style={{backgroundColor:"#808080"}} now={12} key={3} />}
+            <ProgressBar variant="dark" now={2} key={1} />
+            {(values[2] === 1) ? 
+                <ProgressBar variant="success" now={12} key={1} /> :
+                    (values[2] === 0) ? <ProgressBar variant="danger" now={12} key={1} /> :
+                        <ProgressBar style={{backgroundColor:"#808080"}} now={12} key={3} />}
+            <ProgressBar variant="dark" now={2} key={1} />
+            {(values[3] === 1) ? 
+                <ProgressBar variant="success" now={12} key={1} /> :
+                    (values[3] === 0) ? <ProgressBar variant="danger" now={12} key={1} /> :
+                        <ProgressBar style={{backgroundColor:"#808080"}} now={12} key={3} />}
+            <ProgressBar variant="dark" now={2} key={1} />
+            {(values[4] === 1) ? 
+                <ProgressBar variant="success" now={12} key={1} /> :
+                    (values[4] === 0) ? <ProgressBar variant="danger" now={12} key={1} /> :
+                        <ProgressBar style={{backgroundColor:"#808080"}} now={12} key={3} />}
+            <ProgressBar variant="dark" now={2} key={1} />
+            {(values[5] === 1) ? 
+                <ProgressBar variant="success" now={12} key={1} /> :
+                    (values[5] === 0) ? <ProgressBar variant="danger" now={12} key={1} /> :
+                        <ProgressBar style={{backgroundColor:"#808080"}} now={12} key={3} />}
+            <ProgressBar variant="dark" now={2} key={1} />
+            {(values[6] === 1) ? 
+                <ProgressBar variant="success" now={12} key={1} /> :
+                    (values[6] === 0) ? <ProgressBar variant="danger" now={12} key={1} /> :
+                        <ProgressBar style={{backgroundColor:"#808080"}} now={12} key={3} />}
+            <ProgressBar variant="dark" now={2} key={1} />
         </ProgressBar>
     )
 }
